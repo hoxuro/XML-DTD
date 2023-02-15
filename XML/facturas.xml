@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facturas>
+    <factura codigoFactura='826' numeroCliente='9878'>
+        <fechaEmision>
+            <dia>21</dia>
+            <mes>12</mes>
+            <anio>2021</anio>
+        </fechaEmision>
+        <cliente dni='12345678A'>
+            <nombre>Santiago</nombre>
+            <apellido>Pallares</apellido>
+            <apellido>Vicaria</apellido>
+        </cliente>
+        <direccion>
+            <calle>Los gatos</calle>
+            <numero>2</numero>
+            <codigoPostal>11660</codigoPostal>
+            <localidad>Barbate</localidad>
+            <provincia>Cadiz</provincia>
+        </direccion>
+        <telefono>658482569</telefono>
+        <articulo id='121'>
+            <tipo>Silla giratoria</tipo>
+            <nombre>Damisela</nombre>
+            <precio>45</precio>
+            <cantidad>2</cantidad>
+            <subtotal>90</subtotal>
+        </articulo>
+        <articulo id='9568'>
+            <tipo>Mesa escritorio</tipo>
+            <nombre>ZuperJ</nombre>
+            <precio>120</precio>
+            <cantidad>1</cantidad>
+            <subtotal>120</subtotal>
+        </articulo>
+        <articulo id='1158'>
+            <tipo>Lampara mesa</tipo>
+            <nombre>Emérito</nombre>
+            <precio>80</precio>
+            <cantidad>3</cantidad>
+            <subtotal>240</subtotal>
+        </articulo>
+        <descuento>20%</descuento>
+        <iva>21%</iva>
+        <totalFactura>435.6€</totalFactura>
+        <moneda>€</moneda>
+    </factura>
+</facturas>

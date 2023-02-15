@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editoriales>
+    <editorial>
+        <nombre>Nebulosa</nombre>
+        <direccion>
+            <calle>Don Juan</calle>
+            <numero>22</numero>
+            <cp>11300</cp>
+            <municipio>Granada</municipio>
+            <provincia>Granada</provincia>
+        </direccion>
+        <email>nebulosa@gmail.com</email>
+        <webPage>https://nebulosa.com</webPage>
+        <telefono>
+            <fijo>958202122</fijo>
+            <movil>654321987</movil>
+        </telefono>
+        <rrss>
+            <instagram>nebulosaED.instagram</instagram>
+            <facebook>nebulosaED.facebook</facebook>
+            <youtube>nebulosaED.youtube</youtube>
+        </rrss>
+    </editorial>
+</editoriales>

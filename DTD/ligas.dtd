@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DEFINO ENTIDADES -->
+
+<!ENTITY % edia "dia (1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)">
+<!ENTITY % emes "mes (1|2|3|4|5|6|7|8|9|10|11|12)">
+<!ENTITY % edemarcacion "demarcacion (Portero|Defensa|Delantero|Centro|Lateral)">
+
+<!-- DEFINO EL ELEMENTO RAIZ-->
+<!ELEMENT ligas (liga+)>
+
+<!-- DEFINO EL ELEMENTO LIGA-->
+<!ELEMENT liga (jugadores, entrenadores, arbitros, equipos, partidos, estadios, jornadas)>
+<!ATTLIST liga categoria (Primera|Segunda|Tercera) "Primera">
+<!ATTLIST liga temporada CDATA #REQUIRED>
+<!ELEMENT jugadores (jugador+)>
+<!ELEMENT entrenadores (entrenador+)>
+<!ELEMENT arbitros (arbitro+)>
+<!ELEMENT equipos (equipo+)>
+<!ELEMENT partidos (partido+)>
+<!ELEMENT estadios (estadio+)>
+<!ELEMENT jornadas (jornada+)>
+
+<!-- DEFINO EL ELEMENTO JUGADOR -->
+<!ELEMENT jugador (nombre, fechaNac, demarcacion+)>
+<!ATTLIST jugador idJugador ID #REQUIRED>
+<!ATTLIST jugador nacionalidad (española|extranjera) #IMPLIED>
+<!ATTLIST jugador alias CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fechaNac EMPTY>
+<!ATTLIST fechaNac %edia; #REQUIRED>
+<!ATTLIST fechaNac %emes; #REQUIRED>
+<!ATTLIST fechaNac anio CDATA #REQUIRED>
+<!ELEMENT demarcacion EMPTY>
+<!ATTLIST demarcacion %edemarcacion; #REQUIRED>
+
+<!-- DEFINO EL ELEMENTO ENTRENADOR -->
+<!ELEMENT entrenador (nombre, fechaNac, titulos?)>
+<!ATTLIST entrenador idEntrenador ID #REQUIRED>
+<!ATTLIST entrenador alias CDATA #REQUIRED>
+<!ATTLIST entrenador nacionalidad (española|extranjera) #IMPLIED>
+<!ELEMENT titulos (#PCDATA)>
+
+<!-- DEFINO EL ELEMENTO ARBITRO -->
+<!ELEMENT arbitro (nombre)>
+<!ATTLIST arbitro idArbitro ID #REQUIRED>
+<!ATTLIST arbitro alias CDATA #REQUIRED>
+<!ATTLIST arbitro nacionalidad (española|extranjera) #IMPLIED>
+
+<!-- DEFINO EL ELEMENTO ESTADIO-->
+<!ELEMENT estadio (nombreEstadio, ubicacion)>
+<!ATTLIST estadio idEstadio ID #REQUIRED>
+<!ATTLIST estadio aforo CDATA #REQUIRED>
+<!ELEMENT nombreEstadio (#PCDATA)>
+<!ELEMENT ubicacion (#PCDATA)>
+
+<!-- DEFINO EL ELEMENTO EQUIPO -->
+<!ELEMENT equipo (nombreEquip, fechaCons, equipJug, equipEnt, suEstadio)>
+<!ATTLIST equipo equipoId ID #REQUIRED>
+<!ATTLIST equipo categoria (Primera|Segunda|Tercera) #REQUIRED>
+<!ELEMENT equipJug (equipJugador+)>
+<!ELEMENT equipJugador EMPTY>
+<!ATTLIST equipJugador idJug IDREF #REQUIRED>
+<!ELEMENT equipEnt EMPTY>
+<!ATTLIST equipEnt idEnt IDREF #REQUIRED>
+<!ELEMENT suEstadio EMPTY>
+<!ATTLIST suEstadio idEst IDREF #REQUIRED>
+<!ELEMENT nombreEquip (#PCDATA)>
+<!ELEMENT fechaCons EMPTY>
+<!ATTLIST fechaCons %edia; #REQUIRED>
+<!ATTLIST fechaCons %emes; #REQUIRED>
+<!ATTLIST fechaCons anio CDATA #REQUIRED>
+
+<!-- DEFINO EL ELEMENTO PARTIDO -->
+<!ELEMENT partido (seEnfrentan, jueganEn, arbitrara)>
+<!ATTLIST partido idPartido ID #REQUIRED>
+<!ELEMENT seEnfrentan EMPTY>
+<!ATTLIST seEnfrentan equipo1 IDREF #REQUIRED>
+<!ATTLIST seEnfrentan equipo2 IDREF #REQUIRED>
+<!ELEMENT jueganEn EMPTY>
+<!ATTLIST jueganEn idenEstadio IDREF #REQUIRED>
+<!ELEMENT arbitrara EMPTY>
+<!ATTLIST arbitrara idenArbitro IDREF #REQUIRED>
+
+<!-- DEFINO EL ELEMENTO JORNADA-->
+<!ELEMENT jornada (fechaJor, juegaPartido, canales*)>
+<!ATTLIST jornada idJornada ID #REQUIRED>
+<!ATTLIST jornada competicion CDATA #FIXED "Liga Española 2021/2022">
+<!ATTLIST jornada emision (Abierto|Codificado) #REQUIRED>
+<!ELEMENT fechaJor EMPTY>
+<!ATTLIST fechaJor %edia; #REQUIRED>
+<!ATTLIST fechaJor %emes; #REQUIRED>
+<!ELEMENT juegaPartido EMPTY>
+<!ATTLIST juegaPartido idPart IDREF #REQUIRED>
+<!ELEMENT canales (canal+)>
+<!ELEMENT canal (#PCDATA)>

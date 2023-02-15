@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ligas SYSTEM "./ligas.dtd">
+<ligas>
+  <liga temporada="Liga Santander 2022/23" categoria="Primera">
+    <jugadores>
+      <jugador idJugador="JUG_01" nacionalidad="española" alias="killer">
+        <nombre>Robert Lewandoski</nombre>
+        <fechaNac dia="29" mes="8" anio="1980" />
+        <demarcacion demarcacion="Delantero" />
+      </jugador>
+      <jugador idJugador="JUG_02" nacionalidad="española" alias="capitán">
+        <nombre>Sergio Busquets</nombre>
+        <fechaNac dia="23" mes="2" anio="1983" />
+        <demarcacion demarcacion="Centro" />
+      </jugador>
+      <jugador idJugador="JUG_03" nacionalidad="extranjera" alias="mosquito">
+        <nombre>Ousmane Dembelé</nombre>
+        <fechaNac dia="12" mes="3" anio="1994" />
+        <demarcacion demarcacion="Delantero" />
+      </jugador>
+      <jugador idJugador="JUG_04" nacionalidad="extranjera" alias="vini">
+        <nombre>Vinicius JR</nombre>
+        <fechaNac dia="3" mes="2" anio="1998" />
+        <demarcacion demarcacion="Delantero" />
+      </jugador>
+      <jugador idJugador="JUG_05" nacionalidad="extranjera" alias="gato">
+        <nombre>Karim Benzemá</nombre>
+        <fechaNac dia="9" mes="8" anio="1989" />
+        <demarcacion demarcacion="Delantero" />
+      </jugador>
+      <jugador idJugador="JUG_06" nacionalidad="extranjera" alias="jirafa">
+        <nombre>Thibaut Courtois</nombre>
+        <fechaNac dia="9" mes="1" anio="1995" />
+        <demarcacion demarcacion="Portero" />
+      </jugador>
+    </jugadores>
+
+    <entrenadores>
+      <entrenador idEntrenador="ENT_01" alias="mister" nacionalidad="española">
+        <nombre>Xavi Hernández</nombre>
+        <fechaNac dia="5" mes="3" anio="1985" />
+        <titulos>1</titulos>
+      </entrenador>
+      <entrenador idEntrenador="ENT_02" alias="mister" nacionalidad="española">
+        <nombre>Carlo Ancelotti</nombre>
+        <fechaNac dia="9" mes="3" anio="1959" />
+      </entrenador>
+    </entrenadores>
+
+    <arbitros>
+      <arbitro idArbitro="ARB_01" alias="arbi" nacionalidad="española">
+        <nombre>Mateu Lahoz</nombre>
+      </arbitro>
+      <arbitro idArbitro="ARB_02" alias="arbi" nacionalidad="extranjera">
+        <nombre>Pierluigi Collina</nombre>
+      </arbitro>
+    </arbitros>
+
+    <equipos>
+      <equipo equipoId="EQU_001" categoria="Primera">
+        <nombreEquip>FC Barcelona</nombreEquip>
+        <fechaCons dia="1" mes="1" anio="1899" />
+        <equipJug>
+          <equipJugador idJug="JUG_01" />
+          <equipJugador idJug="JUG_02" />
+          <equipJugador idJug="JUG_03" />
+        </equipJug>
+        <equipEnt idEnt="ENT_01" />
+        <suEstadio idEst="EST_001" />
+      </equipo>
+      <equipo equipoId="EQU_002" categoria="Primera">
+        <nombreEquip>Real Madrid</nombreEquip>
+        <fechaCons dia="1" mes="1" anio="1902" />
+        <equipJug>
+          <equipJugador idJug="JUG_04" />
+          <equipJugador idJug="JUG_05" />
+          <equipJugador idJug="JUG_06" />
+        </equipJug>
+        <equipEnt idEnt="ENT_02" />
+        <suEstadio idEst="EST_002" />
+      </equipo>
+    </equipos>
+
+    <partidos>
+      <partido idPartido="PAR_001">
+        <seEnfrentan equipo1="EQU_001" equipo2="EQU_002" />
+        <jueganEn idenEstadio="EST_001" />
+        <arbitrara idenArbitro="ARB_01" />
+      </partido>
+      <partido idPartido="PAR_002">
+        <seEnfrentan equipo1="EQU_002" equipo2="EQU_001" />
+        <jueganEn idenEstadio="EST_002" />
+        <arbitrara idenArbitro="ARB_02" />
+      </partido>
+    </partidos>
+
+    <estadios>
+      <estadio idEstadio="EST_001" aforo="60000">
+        <nombreEstadio>Spotify Camp Nou</nombreEstadio>
+        <ubicacion>España</ubicacion>
+      </estadio>
+      <estadio idEstadio="EST_002" aforo="60000">
+        <nombreEstadio>Santiago Bernabéu</nombreEstadio>
+        <ubicacion>España</ubicacion>
+      </estadio>
+    </estadios>
+
+    <jornadas>
+      <jornada idJornada="JOR_001" competicion="Liga Española 2021/2022" emision="Codificado" >
+        <fechaJor dia="23" mes="4" />
+        <juegaPartido idPart="PAR_001" />
+        <canales>
+          <canal>DAZN</canal>
+          <canal>MOVISTAR+</canal>
+          <canal>Canal Plus</canal>
+        </canales>
+      </jornada>
+      <jornada idJornada="JOR_002" competicion="Liga Española 2021/2022" emision="Codificado" >
+        <fechaJor dia="3" mes="5" />
+        <juegaPartido idPart="PAR_002" />
+        <canales>
+          <canal>DAZN</canal>
+          <canal>MOVISTAR+</canal>
+        </canales>
+      </jornada>
+    </jornadas>
+  </liga>
+</ligas>

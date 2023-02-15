@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+    <ticket codigo="223344">
+        <fecha>
+            <dia>29</dia>
+            <mes>8</mes>
+            <anio>2002</anio>
+        </fecha>
+        <tiempo>
+            <hora>12</hora>
+            <minuto>57</minuto>
+            <segundo>14</segundo>
+        </tiempo>
+        <precioTotal>
+            <precioSinIvaTotal>1000€</precioSinIvaTotal>
+            <iva>21%</iva>
+            <pvpTotal>1210€</pvpTotal>
+        </precioTotal>
+        <formaDePago>
+            <tarjeta>
+                <tipoTarjeta>Mastercard</tipoTarjeta>
+                <numeroTarjeta>12345678</numeroTarjeta>
+                <nombreCliente>José</nombreCliente>
+            </tarjeta>
+        </formaDePago>
+        <datosCorreo>
+            <nombre>José</nombre>
+            <direccion>
+                <tipo>Calle</tipo>
+                <nombre>San José</nombre>
+                <numero>7</numero>
+                <localidad>Alhama</localidad>
+                <provincia>Granada</provincia>
+                <cif>19023</cif>
+                <telefono>123456789</telefono>
+            </direccion>
+        </datosCorreo>
+        <datosCompra>
+            <lineaCompra>
+                <nombreArticulo>IPhone 12</nombreArticulo>
+                <cantidad>1</cantidad>
+                <precioUnitario>1000€</precioUnitario>
+                <iva>21%</iva>
+                <pvp>1210</pvp>
+            </lineaCompra>
+        </datosCompra>
+    </ticket>
+</tickets>

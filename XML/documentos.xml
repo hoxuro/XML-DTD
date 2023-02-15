@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentos>
+    <documento>
+        <deportistas>
+            <deportista>
+                <deporte>Atletismo</deporte>
+                <nombre>Jesse Owens</nombre>
+            </deportista>
+            <deportista>
+                <deporte>Natación</deporte>
+                <nombre>Mark Spitz</nombre>
+            </deportista>
+        </deportistas>
+    </documento>
+
+    <documento>
+        <peliculas autor="Wilde">
+            <pelicula>
+                <titulo>Con faldas y a lo loco</titulo>
+                <director>Billy Wilder</director>
+            </pelicula>
+            <pelicula>
+                <director>Leo McCarey</director>
+                <titulo>Sopa de ganso</titulo>
+            </pelicula>
+        </peliculas>
+    </documento>
+
+    <documento>
+        <texto>
+            <titulo>XML explicado a los niños</titulo>
+            <parrafo>
+                El <abreviatura>XML</abreviatura>define cómo crear
+                lenguajes de marcas.
+            </parrafo>
+            <parrafo>
+                Las marcas se añaden a un documento de texto
+                para añadir información.
+            </parrafo>
+            <enlace>http://www.example.org</enlace>
+        </texto>
+    </documento>
+
+    <documento>
+        <geografiaMundial>
+            <paises>
+                <pais>
+                    <nombre>España</nombre>
+                    <continente>Europa</continente>
+                    <capital>Madrid</capital>
+                </pais>
+            </paises>
+        </geografiaMundial>
+    </documento>
+
+    <documento>
+        <programas>
+            <programa>
+                <nombre>Firefox</nombre>
+                <licencia>GPL</licencia>
+                <licencia>MPL</licencia>
+            </programa>
+            <programa>
+                <nombre>OpenOffice.org</nombre>
+                <licencia>LGPL</licencia>
+            </programa>
+            <programa>
+                <nombre>Inkscape</nombre>
+                <licencia>GPL</licencia>
+            </programa>
+        </programas>
+    </documento>
+
+    <documento>
+        <mundiales-de-futbol>
+            <mundial>
+                <pais>España</pais>
+                <anio>1982</anio>
+            </mundial>
+            </mundiales-de-futbol>
+    </documento>
+
+    <documento>
+        <mediosDeTransporte>
+            <bicicleta velocidad="v&lt;100km/h" />
+            <vehiculo>
+                <patinete>
+                    <velocidadMaxima>50</velocidadMaxima>
+                    <magnitud>Km/h</magnitud>
+                </patinete>
+            </vehiculo>
+        </mediosDeTransporte>
+    </documento>
+</documentos>
